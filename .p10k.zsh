@@ -1,0 +1,1 @@
+/home/avareno/.p10k.zsh
