@@ -8,7 +8,7 @@ return
       config.setup({
         auto_install = true,
         ensure_installed = {"lua", "javascript", "go"},
-        highlight = {enable = true},
+          highlight = {enable = true},
         indent = {enable = true}
       })
 
