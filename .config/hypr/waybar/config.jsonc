@@ -18,6 +18,8 @@
 
   // Choose the order of the modules
   "modules-left": [
+    "custom/appmenu" ,
+    
     "sway/workspaces",
     "sway/mode",
     "sway/scratchpad",
