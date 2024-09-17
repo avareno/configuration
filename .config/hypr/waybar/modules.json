@@ -1,16 +1,16 @@
 {
-  "hyprland/workspaces" : {
+  "hyprland/workspaces": {
     "on-click": "activate",
     "activate-only": false,
-    "all-outputs" : true,
-    "format":"{icon}",
+    "all-outputs": true,
+    "format": "{icon}",
     "format-icons": {
-      "urgent":"",
-      "active":"",
-      "default":""
+      "urgent": "",
+      "active": "",
+      "default": ""
     },
-    "persistant-workspaces":{
-      "*":5
+    "persistant-workspaces": {
+      "*": 5
     }
   },
   "mpd": {
@@ -106,8 +106,8 @@
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "⚠",
-   // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-disconnected": "⚠"
+    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -126,8 +126,7 @@
     },
     "on-click": "pavucontrol"
   },
-  "tray":{
-    "spacing":10
+  "tray": {
+    "spacing": 10
   }
-
 }

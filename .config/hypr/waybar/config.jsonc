@@ -11,21 +11,19 @@
   //"position": "bottom", // Waybar position (top|bottom|left|right)
 
   "spacing": 2, // Gaps between modules (4px)
-  "include":["~/configuration/.config/hypr/waybar/modules.json"],
+  "include": ["~/configuration/.config/hypr/waybar/modules.json"],
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
-    "mpd"
+    "mpd",
     //"wlr/taskbar",
     //"hyprland/window"
   ],
-  "modules-center": [
-    "clock"
-  ],
+  "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
     "backlight",
-    "network",
+    //"network",
     //"power-profiles-daemon",
     //"cpu",
     //"memory",
@@ -35,5 +33,3 @@
     "battery#bat2",
   ],
 }
-
-
