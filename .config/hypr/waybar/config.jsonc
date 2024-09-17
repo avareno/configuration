@@ -15,7 +15,7 @@
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
-    "mpd",
+    "mpd"
     //"wlr/taskbar",
     //"hyprland/window"
   ],
