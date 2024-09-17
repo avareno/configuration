@@ -40,12 +40,7 @@ window#waybar {
   border-radius: 10px;
   min-width: 30px;
   transition: all 0.3s ease-in-out;
-  opacity: 1.0;
-}
-
-
-#clock,
-#taskbar,
+  opacity: 1.0; } #clock, #taskbar,
 #battery,
 #cpu,
 #memory,
@@ -174,4 +169,5 @@ window#waybar {
 #mpd.paused {
   background-color: #ffffff;
 }
+
 

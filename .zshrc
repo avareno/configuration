@@ -1,5 +1,3 @@
-export LANG=pt_PT.UTF-8
-  export LC_ALL=pt_PT.UTF-8
 # Load Powerlevel10k theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 

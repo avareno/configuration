@@ -30,6 +30,7 @@
     //"cpu",
     //"memory",
     //"temperature",
+    "tray",
     "battery",
     "battery#bat2",
   ],
