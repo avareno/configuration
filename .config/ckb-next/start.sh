@@ -1,4 +1,4 @@
 #!/bin/bash
 ckb-next & 
-sleep 1
+sleep 2
 xdotool search --onlyvisible --class "ckb-next" windowclose
