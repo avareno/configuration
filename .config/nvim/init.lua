@@ -17,3 +17,5 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 -- Set up lazy.nvim with plugins
 require("lazy").setup("plugins")
+
+vim.api.nvim_set_keymap('n', '<leader>e', ':lua vim.diagnostic.setqflist()<CR>', { noremap = true, silent = true })

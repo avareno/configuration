@@ -12,7 +12,7 @@ return {
       { "<leader>cp", group = "Prompts" },
       { "<leader>x",  group = "Trouble" },
       { "<leader>t",  group = "Test" },
-      { "<leader>f",  group = "Flutter" },
+      --{ "<leader>f",  group = "Flutter" },
       { "<leader>g",  group = "Git" },
     })
   end,
