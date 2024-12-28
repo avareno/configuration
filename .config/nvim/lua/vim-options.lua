@@ -22,3 +22,5 @@ vim.cmd([[ autocmd FileType blade setlocal syntax=php ]])
 -- Keybinding to toggle terminal
 vim.api.nvim_set_keymap("n", "t", ":ToggleTerm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<Esc>t", [[<C-\><C-n>:ToggleTerm<CR>]], { noremap = true, silent = true })
+-- Keymap for diagnostics
+vim.api.nvim_set_keymap("n", "<leader>e", ":lua vim.diagnostic.setqflist()<CR>", { noremap = true, silent = true })

@@ -1,4 +1,4 @@
--- Lsp stuff
+-- LSP Configuration Loader
 return {
   {
     "nikvdp/ejs-syntax",
@@ -15,43 +15,38 @@ return {
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" },
+        ensure_installed = { "lua_ls", "gopls" }, -- Add other LSP servers as needed
+        auto_install = true,
       })
+
+      -- Setup default handlers for installed servers
       require("mason-lspconfig").setup_handlers({
         function(server_name)
-          require("lspconfig")[server_name].setup({})
+          require("lspconfig")[server_name].setup({
+            on_attach = require("lsp.common").on_attach,
+            capabilities = require("lsp.common").capabilities,
+          })
         end,
       })
     end,
   },
-  -- {
-  --   "akinsho/flutter-tools.nvim",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "stevearc/dressing.nvim", -- optional for vim.ui.select
-  --   },
-  --   config = function()
-  --     local flutter = require("flutter-tools")
-  --     flutter.setup({})
-  --     vim.keymap.set("n", "<leader>fd", "<cmd>FlutterDevices<cr>", { desc = "Devices" })
-  --     vim.keymap.set("n", "<leader>fe", "<cmd>FlutterEmulators<cr>", { desc = "Emulators" })
-  --     vim.keymap.set("n", "<leader>fr", "<cmd>FlutterReload<cr>", { desc = "Reload" })
-  --     vim.keymap.set("n", "<leader>fR", "<cmd>FlutterRestart<cr>", { desc = "Restart" })
-  --     vim.keymap.set("n", "<leader>fq", "<cmd>FlutterQuit<cr>", { desc = "Quit" })
-  --     vim.keymap.set("n", "<leader>fD", "<cmd>FlutterDetach<cr>", { desc = "Detach" })
-  --     vim.keymap.set("n", "<leader>fD", "<cmd>FlutterDetach<cr>", { desc = "Detach" })
-  --     vim.keymap.set("n", "<leader>fo", "<cmd>FlutterOutlineToggle<cr>", { desc = "Widget Tree" })
-  --     vim.keymap.set("n", "<leader>ft", "<cmd>FlutterDevTools<cr>", { desc = "Dev Tools" })
-  --     vim.keymap.set("n", "<leader>fs", "<cmd>FlutterRun<cr>", { desc = "Run" })
-  --   end,
-  -- },
   {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-      vim.keymap.set({ "n", "v" }, "<leader>v", vim.lsp.buf.code_action, { desc = "Code Action" })
+      -- Key mappings for LSP
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+      vim.keymap.set("n", "<C-h>", vim.lsp.buf.definition, { desc = "Go to definition" })
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+
+      -- Import specific language configurations from `lua/lsp`
+      local lsp_configs = { "go" } -- Add other language configurations here
+      for _, lang in ipairs(lsp_configs) do
+        local ok, _ = pcall(require, "lsp." .. lang)
+        if not ok then
+          vim.notify("Failed to load LSP configuration for: " .. lang, vim.log.levels.ERROR)
+        end
+      end
     end,
   },
 }

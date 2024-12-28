@@ -6,16 +6,8 @@ return {
     null_ls.setup({
       sources = {
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.prettierd.with({ extra_filetypes = { "ejs" } }),
         null_ls.builtins.formatting.black,
-        null_ls.builtins.formatting.pretty_php,
-        null_ls.builtins.formatting.sql_formatter,
-        null_ls.builtins.formatting.clang_format,
-        null_ls.builtins.formatting.djlint,
-        null_ls.builtins.formatting.dart_format,
-        null_ls.builtins.formatting.blade_formatter,
-        null_ls.builtins.formatting.ormolu,
-        null_ls.builtins.formatting.shellharden,
+        null_ls.builtins.formatting.isort,
       },
     })
     vim.keymap.set({ "n", "i", "v" }, "<A-S-f>", vim.lsp.buf.format, {})
