@@ -16,8 +16,6 @@ vim.api.nvim_set_keymap("i", "<C-l>", "<Plug>luasnip-jump-prev", { noremap = tru
 vim.api.nvim_set_keymap("s", "<C-l>", "<Plug>luasnip-jump-prev", { noremap = true, silent = true })
 
 
---blade bind 
-vim.cmd([[ autocmd FileType blade setlocal syntax=php ]])
 
 -- Keybinding to toggle terminal
 vim.api.nvim_set_keymap("n", "t", ":ToggleTerm<CR>", { noremap = true, silent = true })
