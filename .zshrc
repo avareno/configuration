@@ -130,3 +130,48 @@ unset __conda_setup
 
 
 [ -f "/home/avareno/.ghcup/env" ] && . "/home/avareno/.ghcup/env" # ghcup-env
+alias prolog='/usr/local/sicstus4.9.0/bin/sicstus'
+alias sicstus='rlwrap /usr/local/sicstus4.9.0/bin/sicstus'
+source /home/avareno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+#Config hyghlight for zsh
+# Customize syntax highlighting colors
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# Set the color palette to black and white
+ZSH_HIGHLIGHT_STYLES[default]='fg=white'
+ZSH_HIGHLIGHT_STYLES[command]='fg=white'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=white'
+ZSH_HIGHLIGHT_STYLES[buffer]='fg=white,bold'
+
+ZSH_HIGHLIGHT_STYLES[quote]='fg=white'
+ZSH_HIGHLIGHT_STYLES[backtick]='fg=white'
+
+# Set color for keywords like 'if', 'else', etc.
+ZSH_HIGHLIGHT_STYLES[keyword]='fg=white'
+
+# Set color for commands (e.g., git, ls)
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=white'
+
+# Set color for parameters and options
+ZSH_HIGHLIGHT_STYLES[parameter]='fg=white'
+
+# Set color for functions and aliases
+ZSH_HIGHLIGHT_STYLES[function]='fg=white'
+
+# Set color for command arguments
+ZSH_HIGHLIGHT_STYLES[argument]='fg=white'
+
+# Set color for the current working directory
+ZSH_HIGHLIGHT_STYLES[path]='fg=white'
+
+# Brackets and braces (for function calls and such)
+ZSH_HIGHLIGHT_STYLES[bracket]='fg=white'
+
+# Set color for comments (you can make them black or gray)
+ZSH_HIGHLIGHT_STYLES[comment]='fg=white'
+
+# Set color for errors
+ZSH_HIGHLIGHT_STYLES[error]='fg=white,bold'

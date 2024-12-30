@@ -1,7 +1,7 @@
 return
 {
-  "akinsho/bufferline.nvim",
-  after = "tokyonight",
+  "catppuccin/bufferline.nvim",
+  after = "catppuccin",
   config = function()
     require("bufferline").setup({
       -- highlights = require("catppuccin.groups.integrations.bufferline").get(),

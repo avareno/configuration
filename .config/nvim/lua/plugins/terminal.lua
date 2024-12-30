@@ -16,7 +16,7 @@ return {
 
   -- Colorscheme
   {
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim",
   },
 
   -- Hop (Better Navigation)

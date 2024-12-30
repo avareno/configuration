@@ -11,6 +11,9 @@ return {
 				"javascript",
 				"go",
 				"php",
+				"python",
+				"java",
+				"dart",
 			},
 			highlight = {
 				enable = true,
