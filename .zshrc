@@ -175,3 +175,7 @@ ZSH_HIGHLIGHT_STYLES[comment]='fg=white'
 
 # Set color for errors
 ZSH_HIGHLIGHT_STYLES[error]='fg=white,bold'
+
+
+export QT_QPA_PLATFORMTHEME=qt6ct
+
