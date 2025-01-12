@@ -1,5 +1,5 @@
 # Load Powerlevel10k theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -132,9 +132,9 @@ unset __conda_setup
 [ -f "/home/avareno/.ghcup/env" ] && . "/home/avareno/.ghcup/env" # ghcup-env
 alias prolog='/usr/local/sicstus4.9.0/bin/sicstus'
 alias sicstus='rlwrap /usr/local/sicstus4.9.0/bin/sicstus'
-source /home/avareno/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #Config hyghlight for zsh
 # Customize syntax highlighting colors
