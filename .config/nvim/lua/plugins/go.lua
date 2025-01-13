@@ -15,14 +15,14 @@ return {
 			})
 
 			-- Keybindings for Go-specific features
-			vim.keymap.set("n", "<leader>gr", ":GoRun<CR>", { desc = "Run Go file" })
-			vim.keymap.set("n", "<leader>gb", ":GoBuild<CR>", { desc = "Build Go project" })
-			vim.keymap.set("n", "<leader>gt", ":GoTest<CR>", { desc = "Run Go tests" })
-			vim.keymap.set("n", "<leader>gi", ":GoInstallDeps<CR>", { desc = "Install Go dependencies" })
-			vim.keymap.set("n", "<leader>gf", ":GoFmt<CR>", { desc = "Format Go file" })
-			vim.keymap.set("n", "<leader>gd", ":GoDoc<CR>", { desc = "Open Go documentation" })
+			vim.keymap.set("n", "<leader>Gr", ":GoRun<CR>", { desc = "Run Go file" })
+			vim.keymap.set("n", "<leader>Gb", ":GoBuild<CR>", { desc = "Build Go project" })
+			vim.keymap.set("n", "<leader>Gt", ":GoTest<CR>", { desc = "Run Go tests" })
+			vim.keymap.set("n", "<leader>Gi", ":GoInstallDeps<CR>", { desc = "Install Go dependencies" })
+			vim.keymap.set("n", "<leader>Gf", ":GoFmt<CR>", { desc = "Format Go file" })
+			vim.keymap.set("n", "<leader>Gd", ":GoDoc<CR>", { desc = "Open Go documentation" })
 			-- vim.keymap.set("n", "<leader>gg", ":GoGenerate<CR>", { desc = "Run Go generate" })
-			vim.keymap.set("n", "<leader>gD", ":GoDebugStart<CR>", { desc = "Start Go debugger" })
+			vim.keymap.set("n", "<leader>GD", ":GoDebugStart<CR>", { desc = "Start Go debugger" })
 		end,
 	},
 }

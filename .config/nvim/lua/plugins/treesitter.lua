@@ -9,6 +9,9 @@ return {
 			ensure_installed = {
 				"lua",
 				"javascript",
+				"markdown",
+				"markdown_inline",
+				"html",
 				"rust",
 				"go",
 				"php",
@@ -24,6 +27,5 @@ return {
 				enable = true,
 			},
 		})
-
 	end,
 }
