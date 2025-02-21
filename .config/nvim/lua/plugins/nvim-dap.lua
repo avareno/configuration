@@ -18,7 +18,32 @@ return {
       local dapui = require("dapui")
 
       -- Setup UI
-      dapui.setup()
+      if session.config.type == python then
+        dapui.setup({
+          layouts = {
+            {
+              elements = {
+                { id = "scopes",      size = 0.40 }, -- Show variables (useful for Rust & Pandas)
+                { id = "breakpoints", size = 0.20 },
+                { id = "stacks",      size = 0.20 },
+                { id = "watches",     size = 0.20 }, -- Watches useful for both Python and Rust
+              },
+              size = 40,
+              position = "left",
+            },
+            {
+              elements = {
+                { id = "repl",    size = 0.50 }, -- REPL (for Python Debugging)
+                { id = "console", size = 0.50 },
+              },
+              size = 10,
+              position = "bottom",
+            },
+          },
+        })
+      else
+        dapui.setup()
+      end
       dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()
       end
