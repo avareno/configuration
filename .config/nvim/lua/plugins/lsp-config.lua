@@ -40,13 +40,13 @@ return {
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
 
       -- Import specific language configurations from `lua/lsp`
-      -- local lsp_configs = { "go" } -- Add other language configurations here
-      -- for _, lang in ipairs(lsp_configs) do
-      --   local ok, _ = pcall(require, "lsp." .. lang)
-      --   if not ok then
-      --     vim.notify("Failed to load LSP configuration for: " .. lang, vim.log.levels.ERROR)
-      --   end
-      -- end
+      local lsp_configs = { "go" } -- Add other language configurations here
+      for _, lang in ipairs(lsp_configs) do
+        local ok, _ = pcall(require, "lsp." .. lang)
+        if not ok then
+          vim.notify("Failed to load LSP configuration for: " .. lang, vim.log.levels.ERROR)
+        end
+      end
     end,
   },
 }

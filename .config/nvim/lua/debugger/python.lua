@@ -1,10 +1,34 @@
 local dap = require("dap")
+local dapui = require("dapui")
 
 dap.adapters.python = {
   type = "executable",
   command = vim.fn.stdpath("data") .. "/mason/bin/debugpy-adapter", -- Path to debugpy adapter
 }
 
+-- Setup UI
+dapui.setup({
+  layouts = {
+    {
+      elements = {
+        { id = "scopes",      size = 0.40 }, -- Show variables (useful for Rust & Pandas)
+        { id = "breakpoints", size = 0.20 },
+        { id = "stacks",      size = 0.20 },
+        { id = "watches",     size = 0.20 }, -- Watches useful for both Python and Rust
+      },
+      size = 40,
+      position = "left",
+    },
+    {
+      elements = {
+        { id = "repl",    size = 0.50 }, -- REPL (for Python Debugging)
+        { id = "console", size = 0.50 },
+      },
+      size = 10,
+      position = "bottom",
+    },
+  },
+})
 dap.configurations.python = {
   {
     name = "Launch Python Script",

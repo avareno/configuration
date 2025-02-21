@@ -8,11 +8,12 @@ return {
   config = function()
     local wk = require("which-key")
     wk.add({
-      { "<leader>x",  group = "Trouble" },
+      -- { "<leader>x",  group = "Trouble" },
       { "<leader>G",  group = "Go Lang" },
       { "<leader>t",  group = "Test" },
       { "<leader>g",  group = "Git" },
       { "<leader>l",  group = "Laravel" },
+      { "<leader>d",  group = "Debugger" },
       { "<leader>e",  group = "Errors" },
     })
   end,
