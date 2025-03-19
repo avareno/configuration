@@ -16,8 +16,8 @@ window#waybar {
 
 #workspaces {
   background: #ffffff;
-  margin: 5px 5px 5px 5px;
-  padding: 6px 1px;
+  padding: 3px 1px;
+  margin: 2px 2px 2px 2px;
   border-radius: 12px;
   font-weight: normal;
   font-style: normal;
@@ -28,11 +28,11 @@ window#waybar {
 
 #workspaces button {
   padding: 0px 10px;
-  margin: 0px 3px;
-  border-radius: 12px;
+  margin: 0px 1px;
+  border-radius: 6;
   transition: all 0.3s ease-in-out;
   opacity: 0.4;
-  font-size: 13px;
+  font-size: 5px;
   background-color: #888888;
 
   /* background-color: #ac753f; */
@@ -45,7 +45,10 @@ window#waybar {
   border-radius: 10px;
   min-width: 30px;
   transition: all 0.3s ease-in-out;
-  opacity: 1.0; } #clock, #taskbar,
+  opacity: 1.0; 
+}
+
+#clock, #taskbar,
 #battery,
 #cpu,
 #memory,

@@ -1,0 +1,70 @@
+version = 3
+final_space = true
+
+[palette]
+  # os = "#ACB0BE"
+  pink = "#F5BDE6"
+  # lavender = "#B7BDF8"
+  # blue = "#8AADF4"
+  # wight = "#FFFFFF"
+  # text = "#494D64"
+  black = "#000000"
+  white = "#FFFFFF"
+  medium_gray = "#A0A0A0"
+  light_gray = "#D0D0D0"
+  dark_gray = "#505050"  
+
+
+[[blocks]]
+  alignment = "left"
+  type = "prompt"
+
+  [[blocks.segments]]
+    background = "p:black"
+    foreground = "p:white"
+    powerline_symbol = "\ue0b4"
+    leading_diamond = "\ue0b6"
+    style = "diamond"
+    template = "{{.Icon}} "
+    type = "os"
+
+  # [[blocks.segments]]
+  #   background = "p:blue"
+  #   foreground = "p:text"
+  #   powerline_symbol = "\ue0b4"
+  #   style = "diamond"
+  #   template = "{{ .UserName }}@{{ .HostName }}"
+  #   type = "session"
+
+  [[blocks.segments]]
+    background = "p:dark_gray"
+    foreground = "p:white"
+    powerline_symbol = "\ue0b4"
+    style = "powerline"
+    template = " {{ .Path }}"
+    type = "path"
+
+    [blocks.segments.properties]
+      folder_icon = "..\ue5fe.."
+      home_icon = "~"
+      style = "agnoster_short"
+
+  [[blocks.segments]]
+    background = "p:medium_gray"
+    foreground = "p:black"
+    style = "powerline"
+    powerline_symbol = "\ue0b4"
+    template = " {{ .HEAD }}"
+    type = "git"
+
+    [blocks.segments.properties]
+      branch_icon = "\ue725 "
+      cherry_pick_icon = "\ue29b "
+      commit_icon = "\uf417 "
+      fetch_status = false
+      fetch_upstream_icon = false
+      merge_icon = "\ue727 "
+      no_commits_icon = "\uf0c3 "
+      rebase_icon = "\ue728 "
+      revert_icon = "\uf0e2 "
+      tag_icon = "\uf412 "
