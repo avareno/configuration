@@ -1,6 +1,5 @@
 #!/bin/sh
 
-killall waybar 
-
-
-waybar -c ~/.config/waybar/config.jsonc & -s ~/.config/waybar/style.css
+killall hyprpanel
+sleep 1  # Small delay to ensure it stops completely
+exec /usr/bin/hyprpanel

@@ -2,12 +2,6 @@ version = 3
 final_space = true
 
 [palette]
-  # os = "#ACB0BE"
-  pink = "#F5BDE6"
-  # lavender = "#B7BDF8"
-  # blue = "#8AADF4"
-  # wight = "#FFFFFF"
-  # text = "#494D64"
   black = "#000000"
   white = "#FFFFFF"
   medium_gray = "#A0A0A0"
@@ -28,6 +22,9 @@ final_space = true
     template = "{{.Icon}} "
     type = "os"
 
+  [blocks.segments.properties]
+    always_enabled = true
+    fetch_version = true
   # [[blocks.segments]]
   #   background = "p:blue"
   #   foreground = "p:text"
@@ -54,7 +51,7 @@ final_space = true
     foreground = "p:black"
     style = "powerline"
     powerline_symbol = "\ue0b4"
-    template = " {{ .HEAD }}"
+    template = " {{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
     type = "git"
 
     [blocks.segments.properties]
@@ -68,3 +65,18 @@ final_space = true
       rebase_icon = "\ue728 "
       revert_icon = "\uf0e2 "
       tag_icon = "\uf412 "
+
+[[blocks.segments]]
+  type = "python"
+  style = "powerline"
+  powerline_symbol = ""
+  foreground = "#100e23"
+  background = "#906cff"
+  template = "  {{ .Env.CONDA_DEFAULT_ENV }} "
+  # [[blocks.segments]]
+  #   type = "python"
+  #   style = "powerline"
+  #   powerline_symbol = ""
+  #   foreground = "#100e23"
+  #   background = "#906cff"
+  #   template = "  {{ .Full }} "

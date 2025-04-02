@@ -19,3 +19,5 @@ require("vim-options")
 
 -- Set up lazy.nvim with plugins
 require("lazy").setup("plugins")
+
+vim.g.dbs = { AI_DB = 'postgres://postgres:madigital@127.0.0.1:5432/AI_DB' }

@@ -559,5 +559,6 @@
   "bar.autoHide": "fullscreen",
   "theme.font.size": "0.8rem",
   "theme.bar.transparent": true,
-  "theme.bar.buttons.monochrome": true
+  "theme.bar.buttons.monochrome": true,
+  "menus.power.showLabel": true
 }

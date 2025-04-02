@@ -65,3 +65,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 export PATH=$PATH:/usr/bin
+
+
+
+# Aliases 
+alias condastart='source ~/miniconda3/bin/activate && export CONDA_DEFAULT_ENV=$(basename $CONDA_PREFIX)'
