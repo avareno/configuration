@@ -68,7 +68,8 @@ export PATH=$PATH:/usr/bin
 export GDK_BACKEND=wayland
 export WEBKIT_DISABLE_COMPOSITING_MODE=1
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
-
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$ANDROID_HOME/tools/bin:$PATH
 
 
 # Aliases 

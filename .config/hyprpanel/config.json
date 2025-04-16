@@ -560,5 +560,6 @@
   "theme.font.size": "0.8rem",
   "theme.bar.transparent": true,
   "theme.bar.buttons.monochrome": true,
-  "menus.power.showLabel": true
+  "menus.power.showLabel": true,
+  "theme.bar.buttons.enableBorders": false
 }
