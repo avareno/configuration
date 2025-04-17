@@ -18,6 +18,9 @@ zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
 
 zinit ice wait lucid
+zinit light zsh-users/zsh-history-substring-search
+
+zinit ice wait lucid
 zinit light zsh-users/zsh-completions
 
 zinit ice wait lucid
@@ -43,8 +46,8 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/myconfig.toml)"
 #eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/tokyo.json)"
 
 # Keybindings
-bindkey "^[OA" history-search-backward  # Up arrow
-bindkey "^[OB" history-search-forward   # Down arrow
+bindkey "^[[A" history-substring-search-up  # Up arrow
+bindkey "^[[B" history-substring-search-down   # Down arrow
 
 # History
 HISTSIZE=5000
@@ -74,3 +77,7 @@ export PATH=$ANDROID_HOME/tools/bin:$PATH
 
 # Aliases 
 alias condastart='source ~/miniconda3/bin/activate && export CONDA_DEFAULT_ENV=$(basename $CONDA_PREFIX)'
+
+# Config colors of search
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=cyan,fg=black'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=white'
