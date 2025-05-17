@@ -44,7 +44,7 @@
           "foreground": "p:black",
           "style": "powerline",
           "powerline_symbol": "\ue0b4",
-          "template": "{{ .HEAD }}{{ if .Working.Changed }} <#ffffff>\uf044</> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#ffffff>\uf046</> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff>\ueb4b</> {{ .StashCount }}{{ end }}{{ if .BranchStatus }} ↑{{ .Ahead }} ↓{{ .Behind }}{{ end }}",
+          "template": "{{ .HEAD }}{{ if .Working.Changed }} <>\uf044</> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <>\uf046</> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <>\ueb4b</> {{ .StashCount }}{{ end }}{{ if .BranchStatus }} ↑{{ .Ahead }} ↓{{ .Behind }}{{ end }}",
           "type": "git",
           "properties": {
             "branch_icon": "\ue725 ",
