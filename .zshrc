@@ -40,9 +40,9 @@ else
 fi
 
 # To customize prompt, edit ~/.config/oh-my-posh/config.toml
-eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/myconfig.toml)"
-# eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/myconfig.json)"
-#eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catpuccin.json)"
+#eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/myconfig.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/myconfig.json)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catpuccin.json)"
 #eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/tokyo.json)"
 
 # Keybindings

@@ -51,7 +51,7 @@ final_space = true
     foreground = "p:black"
     style = "powerline"
     powerline_symbol = "\ue0b4"
-    template = " {{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
+    template= "{{ .HEAD }}{{ if .Working.Changed }} <#ffffff>\uf044</> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#ffffff>\uf046</> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff>\ueb4b</> {{ .StashCount }}{{ end }}"
     type = "git"
 
     [blocks.segments.properties]
@@ -73,10 +73,3 @@ final_space = true
   foreground = "#100e23"
   background = "#906cff"
   template = "  {{ .Env.CONDA_DEFAULT_ENV }} "
-  # [[blocks.segments]]
-  #   type = "python"
-  #   style = "powerline"
-  #   powerline_symbol = ""
-  #   foreground = "#100e23"
-  #   background = "#906cff"
-  #   template = "  {{ .Full }} "

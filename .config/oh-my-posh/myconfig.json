@@ -1,49 +1,72 @@
 {
-  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
   "version": 3,
   "final_space": true,
-
+  "palette": {
+    "black": "#000000",
+    "white": "#FFFFFF",
+    "medium_gray": "#A0A0A0",
+    "light_gray": "#D0D0D0",
+    "dark_gray": "#505050"
+  },
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
-      "segments": [
-        {
-          "type": "os",
-          "style": "plain",
-          "foreground": "cyan"
-        },
-        {
-          "type": "path",
-          "style": "diamond",
-          "foreground": "blue"
-        },
-        {
-          "type": "git",
-          "style": "powerline",
-          "foreground": "green",
-          "properties": {
-            "display_status": true,
-            "display_upstream": true,
-            "display_stash_count": true,
-            "display_add_count": true,
-            "display_push_count": true
-          }
-        }
-      ]
-    },
-    {
       "type": "prompt",
-      "alignment": "right",
       "segments": [
         {
-          "type": "exit",
-          "style": "plain",
-          "foreground": "green",
+          "background": "p:black",
+          "foreground": "p:white",
+          "powerline_symbol": "\ue0b4",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{.Icon}} ",
+          "type": "os",
           "properties": {
-            "success_icon": "✔",
-            "error_icon": "❌"
+            "always_enabled": true,
+            "fetch_version": true
           }
+        },
+        {
+          "background": "p:dark_gray",
+          "foreground": "p:white",
+          "powerline_symbol": "\ue0b4",
+          "style": "powerline",
+          "template": " {{ .Path }}",
+          "type": "path",
+          "properties": {
+            "folder_icon": "..\ue5fe..",
+            "home_icon": "~",
+            "style": "agnoster_short"
+          }
+        },
+        {
+          "background": "p:medium_gray",
+          "foreground": "p:black",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b4",
+          "template": "{{ .HEAD }}{{ if .Working.Changed }} <#ffffff>\uf044</> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#ffffff>\uf046</> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff>\ueb4b</> {{ .StashCount }}{{ end }}",
+          "type": "git",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          }
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "template": "  {{ .Env.CONDA_DEFAULT_ENV }} "
         }
       ]
     }
