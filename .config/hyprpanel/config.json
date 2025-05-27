@@ -561,5 +561,8 @@
   "theme.bar.transparent": true,
   "theme.bar.buttons.monochrome": true,
   "menus.power.showLabel": true,
-  "theme.bar.buttons.enableBorders": false
+  "theme.bar.buttons.enableBorders": false,
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }

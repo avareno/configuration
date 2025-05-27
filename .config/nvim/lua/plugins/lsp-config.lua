@@ -50,7 +50,7 @@ return {
 			-- vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
 
 			-- Import specific language configurations from `lua/lsp`
-			local lsp_configs = { "go", "js" } -- Add other language configurations here
+			local lsp_configs = { "js" } -- Add other language configurations here
 			for _, lang in ipairs(lsp_configs) do
 				local ok, _ = pcall(require, "lsp." .. lang)
 				if not ok then
