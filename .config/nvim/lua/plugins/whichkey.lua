@@ -10,6 +10,7 @@ return {
     wk.add({
       -- { "<leader>x",  group = "Trouble" },
       { "<leader>G",  group = "Go Lang" },
+      { "<leader>ca",  group = "Code action" },
       { "<leader>t",  group = "Test" },
       { "<leader>g",  group = "Git" },
       { "<leader>l",  group = "Laravel" },

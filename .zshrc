@@ -81,3 +81,11 @@ alias condastart='source ~/miniconda3/bin/activate && export CONDA_DEFAULT_ENV=$
 # Config colors of search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=cyan,fg=black'
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=white'
+
+#Android SDK
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
+export PATH="$HOME/flutter/bin:$PATH"
