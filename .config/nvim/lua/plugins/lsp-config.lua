@@ -18,7 +18,20 @@ return {
         },
         config = function()
             local flutter = require("flutter-tools")
-            flutter.setup({})
+            flutter.setup({
+              -- widget_guides = {
+              --   enabled = true,
+              -- },
+              closing_tags = {
+                highlight = "Comment",
+                prefix = "// ",
+                enabled = true,
+              },
+              dev_log = {
+                enabled = true,
+                open_cmd = "tabedit",
+              },
+            })
             vim.keymap.set("n", "<leader>fd", "<cmd>FlutterDevices<cr>", { desc = "Devices" })
             vim.keymap.set("n", "<leader>fe", "<cmd>FlutterEmulators<cr>", { desc = "Emulators" })
             vim.keymap.set("n", "<leader>fr", "<cmd>FlutterReload<cr>", { desc = "Reload" })
@@ -69,6 +82,13 @@ return {
                 end
             end
 
+	    vim.diagnostic.config({
+	      virtual_text = true,
+	      signs = true,
+	      underline = true,
+	      update_in_insert = false,
+	      severity_sort = true,
+	    })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<C-h>", vim.lsp.buf.definition, {})
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })

@@ -1,17 +1,15 @@
-local lspconfig = require("lspconfig")
-local common = require("lsp.common")
+local M = {}
 
-lspconfig.ts_ls.setup({
-	on_attach = common.on_attach,
-	capabilities = common.capabilities,
-	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-	cmd = { "typescript-language-server", "--stdio" },
-})
+M.setup = function()
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+		callback = function()
+			vim.bo.expandtab = true
+			vim.bo.tabstop = 2
+			vim.bo.softtabstop = 2
+			vim.bo.shiftwidth = 2
+		end,
+	})
+end
 
-lspconfig.eslint.setup({
-	on_attach = require("lsp.common").on_attach,
-	capabilities = require("lsp.common").capabilities,
-	settings = {
-		workingDirectory = { mode = "auto" },
-	},
-})
+return M
